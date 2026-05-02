@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sun Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>🌅 Sunrise & Sunset Dashboard</h1>
+</header>
+
+<main>
+
+  <section class="controls">
+    <select id="location">
+      <option value="">-- Select a Location --</option>
+      <option value="41.8781,-87.6298">Chicago</option>
+      <option value="34.0522,-118.2437">Los Angeles</option>
+      <option value="40.7128,-74.0060">New York</option>
+      <option value="51.5074,-0.1278">London</option>
+      <option value="48.8566,2.3522">Paris</option>
+      <option value="35.6895,139.6917">Tokyo</option>
+      <option value="-33.8688,151.2093">Sydney</option>
+      <option value="55.7558,37.6173">Moscow</option>
+      <option value="19.4326,-99.1332">Mexico City</option>
+      <option value="52.52,13.405">Berlin</option>
+    </select>
+
+    <button id="getData">Get Data</button>
+  </section>
+
+  <section id="dashboard">
+
+    <div id="placeholder">
+      <p>Select a location to view solar data.</p>
+    </div>
+
+    <div id="results" class="hidden">
+      <div class="card">
+        <h2>Today</h2>
+        <p>Sunrise: <span id="sunriseToday"></span></p>
+        <p>Sunset: <span id="sunsetToday"></span></p>
+        <p>Dawn: <span id="dawnToday"></span></p>
+        <p>Dusk: <span id="duskToday"></span></p>
+        <p>Day Length: <span id="dayLengthToday"></span></p>
+        <p>Solar Noon: <span id="solarNoonToday"></span></p>
+      </div>
+
+      <div class="card">
+        <h2>Tomorrow</h2>
+        <p>Sunrise: <span id="sunriseTomorrow"></span></p>
+        <p>Sunset: <span id="sunsetTomorrow"></span></p>
+        <p>Dawn: <span id="dawnTomorrow"></span></p>
+        <p>Dusk: <span id="duskTomorrow"></span></p>
+        <p>Day Length: <span id="dayLengthTomorrow"></span></p>
+        <p>Solar Noon: <span id="solarNoonTomorrow"></span></p>
+      </div>
+
+      <p id="timezone"></p>
+    </div>
+
+    <p id="error" class="error"></p>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>Powered by SunriseSunset.io</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
